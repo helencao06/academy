@@ -5,8 +5,10 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Qianhui Cao's Resume</title>
+        <title>阿科斯教育ArcX Academy</title>
         <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 
 
@@ -18,7 +20,15 @@
         <div class="nav-buttons">
             <button onclick="scrollToSection('home')">主页 Home</button>
             <button onclick="scrollToSection('aboutus')">关于我们 About Us</button>
-            <button onclick="scrollToSection('course')">课程选择 Course Offered</button>
+            <div class="dropdown">
+                <button class="dropbtn">课程选择 Course Offered</button>
+                <div class="dropdown-content">
+                    <button onclick="scrollToSection('primary')">小学、初中<br> Primary & Intermediate</button>
+                    <button onclick="scrollToSection('ncea')">NCEA课程 <br>NCEA Course</button>
+                    <button onclick="scrollToSection('uni')">大学课程<br> University Course</button>
+                    <button onclick="scrollToSection('badminton')">羽毛球课程<br> Badminton Course</button>
+                </div>
+            </div>
             <button onclick="scrollToSection('admission')">报名 Registration</button>
             <button onclick="scrollToSection('contact')">联系我们 Contact Us</button>
         </div>
@@ -46,22 +56,23 @@
                 <div class="team-member">
                     <img src="mom1.jpg" alt="蔡丽芬">
                     <h3>蔡丽芬 Fiona</h3>
-                    <p>19年在FE帮助下创立FBOA<br>香港DSE高考状元<br>大二创立企业“赋爱科技”<br>22年互联网+省金奖<br>在教育领域投入超50万</p>
+                    <p>前金利来集团中国区董事<br>曾任DTZ戴德梁行华南区副董事<br>曾任CBRE世邦魏理仕拓展经理<br>在全球五大行之一管理超2000人<br>在教育领域投入超50万</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="biaoj.jpg" alt="谭敏仪">
+                    <h3>谭敏仪 Mini</h3>
+                    <p>双一流师范大学硕士研究生毕业<br>曾任500强企业人力资源部总监<br>曾任房地产Top 1央企人力资源经理<br>国内篮球连锁培训机构创始人<br>在管15个校区，学生人数达5000人<br></p>
+                </div>
+                <div class="team-member">
+                    <img src="yinjiao.jpg" alt="王臻 FRANK">
+                    <h3>尹娇 April</h3>
+                    <p>致力提供高质量的语言与文化教育<br>厦门大学汉语国际教育硕士<br>拥有丰富国内外教学经验<br>曾任中国南京金陵汇文学校教师<br>曾担任新西兰汉语文学教师</p>
                 </div>
                 <div class="team-member">
                     <img src="blue.jpg" alt="曹千蕙">
                     <h3>曹千蕙 Helen</h3>
-                    <p>严格和幽默并存的教学模式<br>以全澳Top 2%的成绩进入悉尼大学<br>法律和荣誉机电一体化双学位<br>仅用一年时间完成新西兰高中课程<br>执教超250名学生，熟悉教育体系</p>
-                </div>
-                <div class="team-member">
-                    <img src="path-to-image3.jpg" alt="马宇含笑">
-                    <h3>马宇含笑</h3>
-                    <p>2018年在FE帮助下创立“PEAK”<br>大二研究项目进入顶会FCCM<br>现就读于NYU Gallatin（美T30）</p>
-                </div>
-                <div class="team-member">
-                    <img src="path-to-image4.jpg" alt="王臻 FRANK">
-                    <h3>王臻 FRANK</h3>
-                    <p>16年在FE帮助下创立Onebiz<br>现供职于世界一线投行<br>就读于NYU Stern（世界top5）</p>
+                    <p>严格和幽默并存的教学模式<br>以全澳Top 2%的成绩进入悉尼大学<br>法律和荣誉机电一体化双学位<br>仅用一年时间完成新西兰高中课程<br>执教超250名学生, 熟悉NZ教育体系</p>
                 </div>
             </div>
             
@@ -71,9 +82,11 @@
 
         <div id="course" class="section" >
             <br>
+
             <h1>提供课程 Course Offered</h1><br>
             <!--primary-->
-            <h3>小学和初中 / Primary and Intermediate Course</h3>
+            <div id="primary" class="section"></div>
+            <h3>小学和初中 / Primary and Intermediate Course </h3>
         
             <p><h11><b>数学 Math Courses</b></p></h11>
                 <h12><p>
@@ -101,7 +114,10 @@
 
 
 
+
+
             <!--NCEA-->
+            <div id="ncea" class="section"></div>
             <h3>NCEA课程 / NCEA Level 1 ~ 3</h3>
 
             <p><h11><b>微积分和统计学 / Calculus and Statistics Courses</b></p></h11>
@@ -186,8 +202,9 @@
             </p>
             </h12>
 
-            <!--University -->
 
+            <!--University -->
+            <div id="uni" class="section"></div>
             <h3>大学入门课程 / University Introduction Courses</h3>
             <h12>
                 <p>
@@ -262,6 +279,9 @@
             </p>
             </h12>
 
+
+            <!--羽毛球-->
+            <div id="badminton" class="section"></div>
             <h3>线上羽毛球课程 / Online Badminton Training</h3>
             <h12>
                 <p>
@@ -283,20 +303,22 @@
 
             <div style="display: flex; justify-content: space-between;" >
                 <div style="width: 48%;">
-
-            <h13>报名方式一：填写报名链接 </h13>
+            <b>
+            <h9>报名方式一：填写报名链接  Fill out the registration link. </h9></b>
             <h8>
                 <p> 
-                    点击<a href="https://hk.mikecrm.com/UP0Qyjm" target="_blank">报名链接</a>，填写完表格后工作人员会在3天内联系您 / Click <a href="https://hk.mikecrm.com/UP0Qyjm" target="_blank">here</a> to register. After filling out the form, our staff will contact you within 3 days.
+                    点击<a href="https://hk.mikecrm.com/UP0Qyjm" target="_blank">报名链接</a>，填写完表格后工作人员会在3天内联系您 
+                    <br> Click <a href="https://hk.mikecrm.com/UP0Qyjm" target="_blank">here</a> to register. After filling out the form, our staff will contact you within 3 days.
                 </p>
                 <p>
                 或扫码 / Or scane QR code.
             </p><br>
-                <img src="QR.png" alt="Logo" class="image">
+                <img src="QR.png" alt="Logo" class="n-image">
             </h8>
             </div>
         <div style="width: 48%;">
-            <h13>报名方式二：添加微信 </h13>
+            <b>
+            <h9>报名方式二：添加工作人员 / Contact Stuff </h9></b>
             <h8>
                 <p> 
                     发送邮件 / Send email to： arcticprg@gmail.com， Or
@@ -304,8 +326,10 @@
                 <p> 
                     微信加工作人员/Add stuff's wechat：fionachoi888， Or
                 </p>
+                <p><br>
                 扫码 / Scane QR code.
-                <img src="contact.jpg" alt="Logo" class="n-image">
+                <img src="contact.jpg" alt="Logo" class="n-image"></p>
+            
         </h8>    
         </div>
 
@@ -314,34 +338,36 @@
 
 
         <div id="contact" class="section" >
+            <br>
 
             <h1>联系我们 Contact Us</h1><br>
 
             <div style="display: flex; justify-content: space-between;" >
                 <div style="width: 48%;">
+                    <h9>加入咨询群 Join Group Chat </h9>
+                    <h8>
+                        <p> 
+                            微信加工作人员/Add stuff's wechat：fionachoi888
+                        </p>
+                        或扫码 / Or scane QR code.
+                        <br>
+                        <img src="group1.jpg" alt="Logo" class="n-image">
+                    </h8>
 
+        </div>
+        <div style="width: 48%;">
             <h9>添加工作人员 </h9>
             <h8>
                 <p> 
                     微信加工作人员/Add stuff's wechat：fionachoi888
                 </p>
                 或扫码 / Or scane QR code.
+                <br>
                 <img src="contact.jpg" alt="Logo" class="n-image">
             </h8>
         </div>
-        <div style="width: 48%;">
-
-            <h9>加入咨询群 Join Group Chat </h9>
-            <h8>
-                <p> 
-                    微信加工作人员/Add stuff's wechat：fionachoi888
-                </p>
-                或扫码 / Or scane QR code.
-                <img src="group1.jpg" alt="Logo" class="n-image">
-            </h8>
-        </div>
     </div>
-        </div>
+</div>
 
 
 
