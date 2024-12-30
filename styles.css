@@ -172,7 +172,7 @@ p{
     text-align: left;
 }
 .n-image {
-    max-width: 100%; /* Ensure the image doesn’t exceed the container width */
+    max-width: 80%; /* Ensure the image doesn’t exceed the container width */
     height: 50%; /* Maintain the image's aspect ratio */
     margin: 0 auto; /* Center the image horizontally */
     display: block; /* Treat the image as a block element */
@@ -180,8 +180,8 @@ p{
     border-radius: 8px; /* Optional: Add rounded corners for a polished look */
 }
 .image {
-    max-width: 300px; /* Ensure the image doesn’t exceed the container width */
-    height: 300px; /* Maintain the image's aspect ratio */
+    max-width: 70%; /* Ensure the image doesn’t exceed the container width */
+    height: 70%; /* Maintain the image's aspect ratio */
     margin: 0 auto; /* Center the image horizontally */
     display: block; /* Treat the image as a block element */
     padding: 10px 0; /* Add spacing above and below the image */
@@ -362,4 +362,76 @@ ul li::before {
 .styled-link:hover {
     background-color: #007BFF; /* Background color on hover */
     color: white; /* Text color on hover */
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: black; /* 按钮背景颜色为黑色 */
+    color: white;           /* 字体颜色 */
+    padding: 15px 30px;     /* 调整按钮大小 */
+    font-size: 18px;        /* 增大字体 */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;     /* 圆角效果 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    position: absolute;
+    background-color: black; /* 设置背景颜色为黑色 */
+    min-width: 270px;        /* 增加宽度 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;     /* 圆角效果 */
+    flex-direction: column; /* 将按钮垂直排列 */
+    display: flex;          /* 使用 flexbox 布局 */
+    display: none;  
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: white;          /* 链接字体颜色为白色 */
+    padding: 15px 20px;    /* 调整链接大小 */
+    text-decoration: none;
+    display: block;
+    font-size: 16px;       /* 增大字体 */
+    text-align: left;      /* 左对齐文本 */
+}
+
+/* Hover to show dropdown content */
+.dropdown:hover .dropdown-content {
+    display: flex; /* 悬停时显示并垂直排列 */
+
+}
+
+/* Hover effect for links */
+.dropdown-content a:hover {
+    background-color: #444; /* 鼠标悬停时变成深灰色 */
+}
+
+/* Arrow down alignment */
+.dropbtn::after {
+    content: "▼";
+    margin-left: 8px;
+    font-size: 16px;       /* 增大箭头大小 */
+    color: white;
+}
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
 }
